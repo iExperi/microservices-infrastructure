@@ -9,3 +9,5 @@ ssl/serial*
 # terraform
 **/*.tfstate*
 **/.terraform
+
+.drone.sec.yml
