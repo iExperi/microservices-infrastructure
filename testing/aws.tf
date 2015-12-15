@@ -7,7 +7,7 @@ module "aws-drone-testing" {
   availability_zone = "us-east-1e"
   ssh_username = "centos"
   source_ami = "ami-61bbf104"
-  short_name = "drone"
+  short_name = "drone-ci"
   long_name = "ciscocloud-drone-ci"
 
   control_count = 3
