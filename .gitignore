@@ -11,3 +11,6 @@ ssl/serial*
 **/.terraform
 
 .drone.sec.yml
+
+# downloaded by playbook
+library/lvg.py
