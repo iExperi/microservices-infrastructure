@@ -22,7 +22,7 @@ module "mantl-ci-hosts-floating" {
   worker_count = 3
   edge_count = 2
   floating_pool = "public-floating-601"
-  external_net_id = "56e3d1ac-44d6-43d7-bea3-e2f334aa8f86"
+  external_net_id = ""
   control_data_volume_size = 20
   worker_data_volume_size = 100
 }
