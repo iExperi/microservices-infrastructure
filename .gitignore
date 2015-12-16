@@ -10,7 +10,7 @@ ssl/serial*
 **/*.tfstate*
 **/.terraform
 
-.drone.sec.yml
+secrets.yml
 
 # downloaded by playbook
 library/lvg.py
