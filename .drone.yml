@@ -10,8 +10,7 @@ build:
     - OS_PASSWORD=$$OS_PASSWORD
     - OS_REGION_NAME=$$OS_REGION_NAME
   commands:
-    - echo $OS_TENANT_ID
-    - echo $$OS_TENANT_ID
+    - env | grep OS_TENANT_NAME
     - ln -s -f $$CI_MATRIX_ANSIBLE_FILE terraform.yml
     - ln -s -f $$CI_MATRIX_TERRAFORM_FILE terraform.tf
     - testing/integration-test.sh
