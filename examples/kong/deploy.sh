@@ -17,7 +17,7 @@ ansible-playbook main.yml -e @../../security.yml -e "ansible_python_interpreter=
 curl -sku "$username:$password" -X POST -H "Content-Type: application/json" -d '{"name": "cassandra"}' https://$ip/api/1/packages
 
 # Wait for Cassandra service to become available in Consul
-while ! curl -sku "$username:$username" -X GET https://$ip:8500/v1/catalog/services|grep -q cassandra; do
+while ! curl -sku "$username:$password" -X GET https://$ip:8500/v1/catalog/services|grep -q cassandra; do
   echo "Waiting for Cassandra to become available..."
   sleep 1
 done
