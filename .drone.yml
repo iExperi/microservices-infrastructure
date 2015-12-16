@@ -9,16 +9,20 @@ build:
     - OS_USERNAME="$$OS_USERNAME"
     - OS_PASSWORD="$$OS_PASSWORD"
     - OS_REGION_NAME="$$OS_REGION_NAME"
+    - GOOGLE_PROJECT="$$GOOGLE_PROJECT"
+    - GOOGLE_REGION="$$GOOGLE_REGION"
+    - GOOGLE_ACCOUNT_JSON="$$GOOGLE_ACCOUNT_JSON"
   commands:
-    - echo "$$MESSAGE"
-    - env | grep OS_TENANT
     - ln -s -f $$CI_MATRIX_ANSIBLE_FILE terraform.yml
     - ln -s -f $$CI_MATRIX_TERRAFORM_FILE terraform.tf
+    - echo $GOOGLE_ACCOUNT_JSON > account.json
     - testing/integration-test.sh
 
 matrix:
   CI_MATRIX_ANSIBLE_FILE:
     - terraform.sample.yml
   CI_MATRIX_TERRAFORM_FILE:
+    # testing/openstack.tf
     # testing/aws.tf
-    - testing/openstack.tf
+    - testing/gce.tf
+    # testing/digitalocean.tf
