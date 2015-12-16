@@ -18,5 +18,5 @@ matrix:
   CI_MATRIX_ANSIBLE_FILE:
     - terraform.sample.yml
   CI_MATRIX_TERRAFORM_FILE:
-    - testing/aws.tf
+    # testing/aws.tf
     - testing/openstack.tf
