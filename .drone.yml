@@ -1,16 +1,15 @@
 build:
   image: ciscocloud/mantl
   environment:
-    - AWS_ACCESS_KEY_ID=$$AWS_ACCESS_KEY_ID
-    - AWS_SECRET_ACCESS_KEY=$$AWS_SECRET_ACCESS_KEY
-    - OS_AUTH_URL=$$OS_AUTH_URL
-    - OS_TENANT_ID=$$OS_TENANT_ID
-    - OS_TENANT_NAME=$$OS_TENANT_NAME
-    - OS_USERNAME=$$OS_USERNAME
-    - OS_PASSWORD=$$OS_PASSWORD
-    - OS_REGION_NAME=$$OS_REGION_NAME
+    - AWS_ACCESS_KEY_ID="$$AWS_ACCESS_KEY_ID"
+    - AWS_SECRET_ACCESS_KEY="$$AWS_SECRET_ACCESS_KEY"
+    - OS_AUTH_URL="$$OS_AUTH_URL"
+    - OS_TENANT_ID="$$OS_TENANT_ID"
+    - OS_TENANT_NAME="$$OS_TENANT_NAME"
+    - OS_USERNAME="$$OS_USERNAME"
+    - OS_PASSWORD="$$OS_PASSWORD"
+    - OS_REGION_NAME="$$OS_REGION_NAME"
   commands:
-    - env | grep OS_TENANT_NAME
     - ln -s -f $$CI_MATRIX_ANSIBLE_FILE terraform.yml
     - ln -s -f $$CI_MATRIX_TERRAFORM_FILE terraform.tf
     - testing/integration-test.sh
