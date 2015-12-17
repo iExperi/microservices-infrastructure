@@ -1,7 +1,5 @@
 provider "google" {
-  credentials = "${file("account.json")}"
-  project = "mantl-ci"
-  region = "us-central1"
+# the credentials are in the .drone.sec file
 }
 
 module "gce-dc" {
