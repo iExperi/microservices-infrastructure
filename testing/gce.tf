@@ -1,6 +1,6 @@
 provider "google" {
 # the credentials are in the .drone.sec file
-  credentials = ""
+  account_file = ""
 }
 
 module "gce-dc" {
