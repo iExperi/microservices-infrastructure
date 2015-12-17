@@ -1,9 +1,8 @@
 build:
   image: ciscocloud/mantl
   environment:
-    GOOGLE_ACCOUNT_FILE: "$$GOOGLE_ACCOUNT_FILE"
+    GOOGLE_CREDENTIALS: "$$GOOGLE_CREDENTIALS"
   commands:
-    - env
     - ln -s -f $$CI_MATRIX_ANSIBLE_FILE terraform.yml
     - ln -s -f $$CI_MATRIX_TERRAFORM_FILE terraform.tf
     - testing/integration-test.sh
