@@ -6,7 +6,7 @@ provider "google" {
 
 module "gce-dc" {
   source = "./terraform/gce"
-  datacenter = "gce-dc"
+  datacenter = "drone-dc"
   control_type = "n1-standard-1"
   worker_type = "n1-highcpu-2"
   network_ipv4 = "10.0.0.0/16"
