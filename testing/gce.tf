@@ -1,6 +1,5 @@
 provider "google" {
-# the credentials are in the .drone.sec file
-  account_file = ""
+  credentials = ""
   region = "us-central1"
   project = "mantl-ci"
 }
