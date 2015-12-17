@@ -1,14 +1,17 @@
 build:
   image: ciscocloud/mantl
   environment:
+    # AWS user 'drone'
     - AWS_ACCESS_KEY_ID="$$AWS_ACCESS_KEY_ID"
     - AWS_SECRET_ACCESS_KEY="$$AWS_SECRET_ACCESS_KEY"
+    # CiscoCloud OpenStack
     - OS_AUTH_URL="$$OS_AUTH_URL"
     - OS_TENANT_ID="$$OS_TENANT_ID"
     - OS_TENANT_NAME="$$OS_TENANT_NAME"
     - OS_USERNAME="$$OS_USERNAME"
     - OS_PASSWORD="$$OS_PASSWORD"
     - OS_REGION_NAME="$$OS_REGION_NAME"
+    # GCE 'drone-ci' project
     - GOOGLE_CREDENTIALS="$$GOOGLE_CREDENTIALS"
   commands:
     - ln -s -f $$CI_MATRIX_ANSIBLE_FILE terraform.yml
