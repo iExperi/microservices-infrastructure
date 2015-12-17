@@ -1,6 +1,8 @@
 provider "google" {
 # the credentials are in the .drone.sec file
   account_file = ""
+  region = "us-central1"
+  project = "mantl-ci"
 }
 
 module "gce-dc" {
