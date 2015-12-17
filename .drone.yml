@@ -9,7 +9,7 @@ build:
     - OS_USERNAME="$$OS_USERNAME"
     - OS_PASSWORD="$$OS_PASSWORD"
     - OS_REGION_NAME="$$OS_REGION_NAME"
-    - GOOGLE_CREDENTIALS="$$GOOGLE_CREDENTIALS"
+    - GOOGLE_ACCOUNT_FILE="$$GOOGLE_CREDENTIALS"
   commands:
     - ln -s -f $$CI_MATRIX_ANSIBLE_FILE terraform.yml
     - ln -s -f $$CI_MATRIX_TERRAFORM_FILE terraform.tf

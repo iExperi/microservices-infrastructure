@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = ""
+  account_file = ""
   region = "us-central1"
   project = "mantl-ci"
 }
