@@ -1,5 +1,5 @@
 build:
-  image: ciscocloud/mantl
+  image: sehqlr/mantl
   environment:
     GOOGLE_CREDENTIALS: "$$GOOGLE_CREDENTIALS"
   commands:
