@@ -1,5 +1,4 @@
 provider "google" {
-  credentials = ""
   region = "us-central1"
   project = "mantl-ci"
 }
